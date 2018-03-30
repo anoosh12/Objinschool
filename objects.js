@@ -8,6 +8,7 @@ function Student(firstName, lastName, grade){
     this.sections = [];
 }
 
+
 function Teacher(firstName, lastName, subject){
     this.id = id++;
     this.firstName = firstName;

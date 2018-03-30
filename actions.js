@@ -22,47 +22,46 @@ function addSection(){
     buildSelectLists();
 }
 
-
-
-function listStudents(){
+function listTeachers(){
     var html = "<table border = '1'>";
-    for (var i = 0;i < allStudents.length; i++){
-    html += "<tr>";
-    html +="<td>" + allStudents[i].firstName + "</td>";
-    html += "<td>" + allStudents[i].lastName + "</td>";
-    html += "<td>" + allStudents[i].subject + "</td>";
+    for (var i = 0; i < allTeachers.length; i++) {
+        html += "<tr>";
+        html += "<td>" + allTeachers[i].firstName + "</td>";
+        html += "<td>" + allTeachers[i].lastName + "</td>";
+        html += "<td>" + allTeachers[i].subject + "</td>";
+        html += "</tr>";
     }
     html += "</table>";
-    document.getElementById("studentsList").innerHTML = html;
-
+    document.getElementById("teacherList").innerHTML = html;
 }
 
-
-function listTeachers(){
-var html2 = "<table border = '1'>";
-    for (var i = 0;i < allTeachers.length; i++){
-    html2 += "<tr>";
-    html2 +="<td>" + allTeachers[i].firstName + "</td>";
-    html2 += "<td>" + allTeachers[i].lastName + "</td>";
-    html2 += "<td>" + allTeachers[i].subject + "</td>";
+function listStudents(){
+    var html2 = "<table border = '1'>";
+    for (var i = 0; i < allStudents.length; i++) {
+        html2 += "<tr>";
+        html2 += "<td>" + allStudents[i].firstName + "</td>";
+        html2 += "<td>" + allStudents[i].lastName + "</td>";
+        html2 += "<td>" + allStudents[i].grade + "</td>";
+        html2 += "</tr>";
     }
-html2 += "</table>";
-document.getElementById("teacherList").innerHTML = html2;
-
+    html2 += "</table>";
+    document.getElementById("studentList").innerHTML = html2;
 }
+
+
 
 function listSections(){
     var html3 = "<table border = '1'>";
-    for (var i = 0;i < allSections.length; i++){
+    for (var i = 0; i < allSections.length; i++){
         html3 += "<tr>";
-        html3 +="<td>" + allStudents[i].firstName + "</td>";
-        html3 += "<td>" + allStudents[i].lastName + "</td>";
-        html3 += "<td>" + allStudents[i].subject + "</td>";
+        html3 += "<td>" + allSections[i].name + "</td>";
+        html3 += "<td>" + allSections[i].count + "</td>";
+        html3 += "</tr>";
     }
     html3 += "</table>";
-    document.getElementById("studentsList").innerHTML = html3;
-
+    document.getElementById("sectionList").innerHTML = html3;
 }
+
 
 function buildSelectLists(){
     var studentSelectList = "";

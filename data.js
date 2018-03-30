@@ -3,6 +3,7 @@ var allStudents= [];
 var allTeachers= [];
 var allSections= [];
 
+
 allStudents.push(new Student("Isaac","Reyes",12));
 allStudents.push(new Student("Nate","Bake",11));
 allStudents.push(new Student("Dylan","DeLancie",11));
