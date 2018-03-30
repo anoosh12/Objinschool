@@ -1,0 +1,22 @@
+#title{
+    text-align: center;
+    margin:auto;
+    font-size: 20px;
+}
+
+#System{
+    font-size: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+button:focus {outline:0 !important;}
+
+body{
+    background-color: lightblue;
+}
+#title{
+    font-size: 45px;
+}

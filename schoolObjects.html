@@ -1,0 +1,94 @@
+<meta charset="UTF-8">
+<title>Objects</title>
+<script src="objects.js"></script>
+<script src="actions.js"></script>
+<script src="data.js"></script>
+<link rel="stylesheet" href="schoolObjects.css">
+<h1>School System</h1></head>
+<body onload = "buildSelectLists()">
+
+<table id= "System" border="1" cellspacing="5" cellpadding="10">
+    <tr id = "Students">
+    <td> Add New Student(first name): </td>
+    <td><input type="text" id="studentFirst" value="" size="25"></td>
+    <td> Student Last Name: </td>
+    <td><input type="text" id="studentLast" value="" size="25"></td>
+    <td>Students Grade Level</td>
+    <td><input type="text" id="studentGrade" value="" size="25"></td>
+    <td><button id = "Button" onclick = "addStudent()">Add Student<</button></td>
+    </tr>
+
+    <tr id = "Teachers">
+    <td> Add New Teacher (first name): </td>
+    <td><input type="text" id="teacherFirst" value="" size="25" ></td>
+    <td> Student Last Name: </td>
+    <td><input type="text" id="teacherLast" value="" size="25" ></td>
+    <td>Students Grade Level</td>
+    <td><input type="text" id="teacherSubject" value="" size="25" ></td>
+    <td><button id = "Button2" onclick = "addTeacher()">Add Teacher<</button></td>
+    </tr>
+
+    <tr id = "Section">
+    <td> Add New Section: </td>
+    <td><input type="text" id="sectionName" value="" size="25" ></td>
+    <td> Section Count: </td>
+    <td><input type="text" id="sectionCount" value="" size="25" ></td>
+    <td><button id = "Button3" onclick = "addSection()">Add Section<</button></td>
+    </tr>
+
+    <tr id = "Lists">
+    <td><button id="Button4" onclick="listStudents()"> List Students</button></td>
+    <td><button id="Button5" onclick="listTeachers()"> List Teachers</button></td>
+    <td><button id="Button6" onclick="listSections()"> List Sections</button></td>
+    <td><button id=" Add Student" onclick="addStudentToSection()"> Add Student to Section</button></td>
+    <td><button id=" Add Teacher" onclick="addTeacherToSection()"> Add Teacher to Section</button></td>
+</table>
+
+
+<table>
+    <tr>
+        <td width="30%"><h1>Teachers</h1>
+            <span id = "teacherList"></span>
+        </td>
+        <td width="50%">
+            <h1>Students</h1>
+            <span id = "studentList"></span></td>
+        <td width="70%"><h1>Sections</h1>
+            <span id = "sectionList"></span></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td width="30%">
+            <select id="studentSelectList">
+                <option value="x">Select Student to Add</option>
+            </select>
+        </td>
+        <td width="31%">
+            <select id="teacherSelectList">
+                <option value="x">Select Teacher to Add</option>
+            </select>
+        </td>
+        <td width="32%">
+            <select id="sectionSelectList">
+                <option value="x">Select Section to Edit</option>
+            </select>
+        </td>
+    </tr>
+</table>
+<td><button id = "Add Student Button" onclick = "addStudentToSection()">Add Student to Section</button></td>
+<td><button id = "Add Teacher Button" onclick = "addTeacherToSection()">Add Teacher to Section</button></td>
+<br><br>
+<select id="sectionSelectList2">
+    <option value="x">Select Section to list</option>
+</select>
+<button onclick="listStudentsInSections()">List Students in Sections</button>  <div id="output"></div>
+<br><br>
+<select id="sectSelectList">
+    <option value="x">Select Section to list teachers</option>
+</select>
+<button onclick="listTeachersInSection()">List Teachers in Sections</button>  <div id="output2"></div>
+
+
+</body>
+</html>
